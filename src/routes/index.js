@@ -6,16 +6,7 @@ const { putProduct } = require("../controllers/PUT/putProduct");
 const { deleteProduct } = require("../controllers/DELETE/deleteProduct");
 const { getAllProductsInactive } = require("../controllers/GET/getAllProductsInactive");
 
-
-const express = require("express");
-
 const router = Router();
-
-
-
-
-
-
 
 router.get("/", function (req, res) {
   res.send("Backend Productos Angular");

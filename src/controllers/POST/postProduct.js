@@ -1,8 +1,9 @@
 const { Product } = require("../../db");
 
 async function postProduct(req, res) { 
+  console.log('first')
   console.log(req.body);
-  let imgAlt= "https://as2.ftcdn.net/v2/jpg/04/70/29/97/1000_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"
+  let imgAlt= "https://raw.githubusercontent.com/edcastillob/backend-product/main/src/img/noimage.png"
   try {
     let { name, category, price, description, images } = req.body;
     
