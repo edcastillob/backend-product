@@ -13,12 +13,12 @@ server.use(bodyParser.json());
 server.use(express.json());
 server.use(router);
 
-// const corsOptions = {
-//   origin: "http://localhost:4200",
-//   methods: "GET,HEAD,PUT,POST,DELETE",
-//   allowedHeaders: "Content-Type,Authorization",
-// };
+const corsOptions = {
+  origin: "http://localhost:4200",
+  methods: "GET,HEAD,PUT,POST,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+};
 
-// server.use(cors(corsOptions));
+server.use(cors(corsOptions));
 
 module.exports = server;

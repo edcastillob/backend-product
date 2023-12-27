@@ -11,8 +11,10 @@ const sequelize = new Sequelize(
 );
 
 const ProductModel = require("./models/product")(sequelize);
+const UserModel = require("./models/User")(sequelize);
 
 module.exports = {
   Product: ProductModel,
+  User: UserModel,
   sequelize,
 };

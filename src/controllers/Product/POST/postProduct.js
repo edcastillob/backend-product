@@ -1,8 +1,6 @@
-const { Product } = require("../../db");
+const { Product } = require("../../../db");
 
 async function postProduct(req, res) { 
-  console.log('first')
-  console.log(req.body);
   let imgAlt= "https://raw.githubusercontent.com/edcastillob/backend-product/main/src/img/noimage.png"
   try {
     let { name, category, price, description, images } = req.body;
@@ -19,7 +17,7 @@ async function postProduct(req, res) {
       name,      
       description,      
       price,
-      images,
+      images:[images],
       isActive: true,
       category
       

@@ -1,4 +1,4 @@
-const { Product, Provider } = require("../../db");
+const { Product, Provider } = require("../../../db");
 
 async function getProductId(req, res) {
    

@@ -1,4 +1,4 @@
-const { Product } = require("../../db");
+const { Product } = require("../../../db");
 
 async function putProduct(req, res) {
   const productId = req.params.id;
@@ -10,6 +10,9 @@ async function putProduct(req, res) {
 
   if (typeof newData.price === "string") {
     newData.price = parseFloat(newData.salePrice);
+  }
+  if (newData.images && typeof newData.images === 'string') {
+    newData.images = [newData.images];
   }
 
   try {

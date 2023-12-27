@@ -1,4 +1,4 @@
-const { Product } = require("../../db");
+const { Product } = require("../../../db");
 
 async function getAllProductsInactive(req, res) {
  
