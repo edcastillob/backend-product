@@ -3,8 +3,10 @@ const router = require("./routes");
 const cors = require("cors");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
-
+const morgan = require('morgan');
 const server = express();
+
+server.use(morgan('dev')); 
 
 server.use(helmet());
 server.use(cors());

@@ -1,6 +1,6 @@
 const server = require("./src/server");
 const { sequelize } = require("./src/db");
-const PORT = 3001;
+const { PORT } = require("./src/config");
 
 sequelize
   .sync({ force: false }) // Puedes cambiar force a false después de la primera ejecución para evitar recrear la tabla cada vez

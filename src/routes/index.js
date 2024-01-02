@@ -10,6 +10,9 @@ const { getAllUsers } = require("../controllers/User/getAllUsers");
 const { getUser } = require("../controllers/User/getUser");
 const { updateUser } = require("../controllers/User/putUser");
 const { login } = require("../controllers/User/login");
+const { createCheckoutSession } = require("../controllers/Payment/create-checkout-session");
+const { success } = require("../controllers/Payment/success");
+const { cancel } = require("../controllers/Payment/cancel");
 
 const router = Router();
 // Ruta /
@@ -30,7 +33,13 @@ router.post("/user", postUser);
 router.get("/user", getAllUsers);
 router.put("/user/:id", updateUser);
 router.get("/username", getUser);
-router.post("/login", login)
+router.post("/user/login", login)
+
+// Payment
+
+router.post("/payment/create-checkout-session", createCheckoutSession)
+router.get("/payment/success", success)
+router.get("/payment/cancel", cancel)
 
 
 
