@@ -13,6 +13,7 @@ const { login } = require("../controllers/User/login");
 const { createCheckoutSession } = require("../controllers/Payment/create-checkout-session");
 const { success } = require("../controllers/Payment/success");
 const { cancel } = require("../controllers/Payment/cancel");
+const { loginGoogle } = require("../controllers/User/loginGoogle");
 
 const router = Router();
 // Ruta /
@@ -34,6 +35,7 @@ router.get("/user", getAllUsers);
 router.put("/user/:id", updateUser);
 router.get("/username", getUser);
 router.post("/user/login", login)
+router.post("/user/login-google", loginGoogle)
 
 // Payment
 
