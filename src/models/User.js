@@ -1,4 +1,5 @@
 const { DataTypes } = require('sequelize');
+const Review = require('./Review')
 
 module.exports = (sequelize) => {
   const User = sequelize.define(
@@ -36,6 +37,7 @@ module.exports = (sequelize) => {
     },
     { timestamps: false }
   );
+
 
   return User;
 };
