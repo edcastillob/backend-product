@@ -14,6 +14,7 @@ const { createCheckoutSession } = require("../controllers/Payment/create-checkou
 const { success } = require("../controllers/Payment/success");
 const { cancel } = require("../controllers/Payment/cancel");
 const { loginGoogle } = require("../controllers/User/loginGoogle");
+const { createReview } = require("../controllers/Reviews/postReview");
 
 const router = Router();
 // Ruta /
@@ -43,6 +44,11 @@ router.post("/payment/create-checkout-session", createCheckoutSession)
 router.get("/payment/success", success)
 router.get("/payment/cancel", cancel)
 
+
+
+// Reviews
+
+router.post("/review/create", createReview)
 
 
 module.exports = router;

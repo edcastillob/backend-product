@@ -27,7 +27,10 @@ module.exports = (sequelize) => {
       productId: {
         type: DataTypes.UUID,
         allowNull: false,
-      },
+      },      
+      image: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+       },
     },
     { timestamps: true }
   );

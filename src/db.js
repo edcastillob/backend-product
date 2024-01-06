@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
   }
 );
 
-const ProductModel = require("./models/product")(sequelize);
+const ProductModel = require("./models/Product")(sequelize);
 const UserModel = require("./models/User")(sequelize);
 const PaymentModel = require("./models/Payment")(sequelize);
 const ReviewModel = require('./models/Review')(sequelize);
