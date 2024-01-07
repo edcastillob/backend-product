@@ -15,6 +15,7 @@ const { success } = require("../controllers/Payment/success");
 const { cancel } = require("../controllers/Payment/cancel");
 const { loginGoogle } = require("../controllers/User/loginGoogle");
 const { createReview } = require("../controllers/Reviews/postReview");
+const { postReviewProduct } = require("../controllers/Reviews/postReviewProduct");
 
 const router = Router();
 // Ruta /
@@ -49,6 +50,7 @@ router.get("/payment/cancel", cancel)
 // Reviews
 
 router.post("/review/create", createReview)
+router.post("/review-product", postReviewProduct)
 
 
 module.exports = router;
