@@ -14,6 +14,7 @@ const ProductModel = require("./models/Product")(sequelize);
 const UserModel = require("./models/User")(sequelize);
 const PaymentModel = require("./models/Payment")(sequelize);
 const ReviewModel = require('./models/Review')(sequelize);
+const ProviderModel = require('./models/Provider')(sequelize);
 
 
 module.exports = {
@@ -21,5 +22,6 @@ module.exports = {
   User: UserModel,
   Payment: PaymentModel,
   Review: ReviewModel,
+  Provider: ProviderModel,
   sequelize,
 };

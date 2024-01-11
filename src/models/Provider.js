@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  const Product = sequelize.define(
-    "Product",
+  const Provider = sequelize.define(
+    "Provider",
     {
       id: {
         type: DataTypes.UUID,
@@ -14,33 +14,26 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      description: {
-        type: DataTypes.TEXT,
+      address: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      price: {
-        type: DataTypes.FLOAT,
+      phone: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      images: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
+      rif: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      isActive: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true,
-      },
-      category: {
-        type: DataTypes.TEXT, 
-        allowNull: true, 
-      },      
-      provider: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
+      email: {
+        type: DataTypes.STRING,
         allowNull: true,
+        unique: true,
       },
     },
     { timestamps: false }
   );
 
-  return Product;
+  return Provider;
 };
