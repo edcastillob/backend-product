@@ -17,6 +17,10 @@ const { loginGoogle } = require("../controllers/User/loginGoogle");
 const { createReview } = require("../controllers/Reviews/postReview");
 const { postReviewProduct } = require("../controllers/Reviews/postReviewProduct");
 const { postProvider } = require("../controllers/Provider/postProvider");
+const { getAllProvider } = require("../controllers/Provider/getAllProvider");
+const { getProviderId } = require("../controllers/Provider/getProviderId");
+const { updateProvider } = require("../controllers/Provider/putProvider");
+const { deleteProvider } = require("../controllers/Provider/deleteProvider");
 
 const router = Router();
 // Ruta /
@@ -56,6 +60,10 @@ router.post("/review-product", postReviewProduct)
 
 // Provider
 router.post("/provider", postProvider)
+router.get("/provider", getAllProvider)
+router.get("/provider/:id", getProviderId);
+router.put("/provider/:id", updateProvider);
+router.delete("/provider/:id", deleteProvider);
 
 
 module.exports = router;
